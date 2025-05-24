@@ -1,0 +1,13 @@
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Logs and outputs
+*.log
+*.out
+*.tmp
+*.DS_Store

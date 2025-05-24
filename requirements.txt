@@ -1,0 +1,16 @@
+opencv-python-headless ==  4.10.0.84
+numpy              ==  1.26.4
+pandas             ==  2.2.2
+matplotlib         ==  3.8.4
+seaborn            ==  0.13.2
+tqdm               ==  4.67.1
+scikit-learn       ==1.4.2
+pillow             ==  10.2.0
+torch              ==  2.2.1
+torchvision        ==  0.17.1
+scikit-image       == 0.23.2
+fastapi            ==  0.115.12
+starlette          ==  0.46.1
+uvicorn[standard]
+ultralytics        == 8.0.196
+python-multipart   == 0.0.20

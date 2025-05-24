@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  vehicle-detection-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dattran2004/enhancing_and_detecting_vehicles_in_low-light_conditions:latest
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

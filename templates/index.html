@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🚗 Enhance & Detect Vehicle</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .preview-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    .image-box {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .result-label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .preview-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚘 Enhance & Detect Vehicle</h1>
+
+  <form action="/process" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required><br><br>
+
+    <label><input type="radio" name="mode" value="enhance" checked> ✨ Only Enhance</label>
+    <label><input type="radio" name="mode" value="detect"> 🧠 Enhance + Detect</label><br><br>
+
+    <button type="submit">🚀 Run</button>
+  </form>
+
+  {% if img_result and img_original %}
+  <div class="preview-section">
+    <div class="image-box">
+      <div class="result-label">🖼️ Original Image</div>
+      <img src="data:image/png;base64,{{ img_original }}" alt="Original Image">
+    </div>
+    <div class="image-box">
+      <div class="result-label">🎯 Result Image</div>
+      <img src="data:image/png;base64,{{ img_result }}" alt="Result Image">
+    </div>
+  </div>
+  {% endif %}
+
+</body>
+</html>
