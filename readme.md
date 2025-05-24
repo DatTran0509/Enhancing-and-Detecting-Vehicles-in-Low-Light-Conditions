@@ -23,7 +23,7 @@ This project — **"Detect Vehicles in Low-Light Conditions"** — aims to impro
 - Once the image is enhanced, it is passed into one of the detection models:
   - **YOLOv8** (default)
   - or **Faster R-CNN** (optional)
-- Detected vehicles include: `car`, `bike`, `bus`, `truck`, etc.
+- Detected vehicles include: `car`, `bike`, `bus`, `truck`, `boat`.
 
 ---
 
@@ -42,7 +42,5 @@ The system is deployed using **FastAPI** and **Uvicorn**, enabling both human-fr
 ## 🚀 Demo Instructions (Docker)
 
 ```bash
-git clone https://github.com/yourname/vehicle-lowlight-detection.git
-cd vehicle-lowlight-detection
-
-docker compose up --build
+git clone https://github.com/DatTran0509/Enhancing-and-Detecting-Vehicles-in-Low-Light-Conditions
+docker-compose up --build
