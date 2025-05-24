@@ -41,6 +41,20 @@ The system is deployed using **FastAPI** and **Uvicorn**, enabling both human-fr
 
 ## 🚀 Demo Instructions (Docker)
 
+### 🔹 Step 1: Clone the Repository
+
 ```bash
 git clone https://github.com/DatTran0509/Enhancing-and-Detecting-Vehicles-in-Low-Light-Conditions
+```
+### 🔹 Step 2: Build & Run the Service
+```bash
 docker-compose up --build
+```
+### 🔹 Step 3: Open the Web Interface
+```bash
+http://localhost:8000
+```
+### 🔹 Step 4: Stop the Service (when done)
+```bash
+docker-compose down
+```
